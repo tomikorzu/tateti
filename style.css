@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #282f41;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  
+  .tateti-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #3b3b3b;
+    box-shadow: 0 0 10px 4px #fff;
+    border-radius: 5px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 10px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 0 0 25px;
+  }
+  .container {
+    display: flex;
+    gap: 10px;
+    margin: 0 0 25px;
+  }
+  .col1,
+  .col2,
+  .col3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+    background-color: #515d7c;
+    border-radius: 5px;
+  }
+  .card:hover{
+    box-shadow: 0 0 10px 4px #fff;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .h3-winner{
+      padding: 0 0 20px;
+  }
+  .resetBtn {
+    background-color: #515d7c;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 50px;
+    background-color: #974c4c;
+    border-radius: 5px;
+  }
+  .resetBtn:hover {
+    background-color: #933a3a;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  
+  .disabled {
+    pointer-events: none;
+  }
+  
+  .card img {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .card img.visible {
+    opacity: 1;
+  }
+  
+  .card img.fade-out {
+    opacity: 0;
+  }
+  
