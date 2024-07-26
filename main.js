@@ -44,3 +44,22 @@ function checkWin() {
         });
     });
 }
+
+function resetGame() {
+    cards.forEach(card => {
+        const img = card.querySelector('img');
+        if (img) {
+            img.classList.remove('visible');
+            img.classList.add('fade-out');
+            img.addEventListener('transitionend', () => {
+                card.innerHTML = '';
+            });
+        } else {
+            card.innerHTML = '';
+        }
+        card.classList.remove('disabled');
+    });
+    winnerText.textContent = 'El ganador es:'; // Restablecer el texto del ganador
+    gameMessage.textContent = 'Eliga un cuadrado'; // Restablecer el mensaje del juego
+    currentPlayer = 'X';
+}
