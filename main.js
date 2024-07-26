@@ -17,9 +17,9 @@ function clickInCard(event) {
         img.style.height = '100%';
         card.appendChild(img);
         requestAnimationFrame(() => {
-            img.classList.add('visible'); // Añadir la clase para la transición
+            img.classList.add('visible');
         });
-        card.classList.add('disabled');  // Deshabilitar la tarjeta inmediatamente
+        card.classList.add('disabled'); 
         if (checkWin()) {
             winnerText.textContent = `El ganador es: ${currentPlayer}`;
             gameMessage.textContent = 'Presione reiniciar';
@@ -35,9 +35,9 @@ function clickInCard(event) {
 
 function checkWin() {
     const win = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8], // filas
-        [0, 3, 6], [1, 4, 7], [2, 5, 8], // columnas
-        [0, 4, 8], [2, 4, 6]  // diagonales
+        [0, 1, 2], [3, 4, 5], [6, 7, 8], 
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+        [0, 4, 8], [2, 4, 6]  
     ];
     return win.some(step => {
         return step.every(index => {
@@ -69,15 +69,15 @@ function resetGame() {
         }
         card.classList.remove('disabled');
     });
-    winnerText.textContent = 'El ganador es:'; // Restablecer el texto del ganador
-    gameMessage.textContent = 'Eliga un cuadrado'; // Restablecer el mensaje del juego
+    winnerText.textContent = 'El ganador es:'; 
+    gameMessage.textContent = 'Eliga un cuadrado'; 
     currentPlayer = 'X';
 }
 
 function disableCards() {
     cards.forEach(card => {
         card.classList.add('disabled');
-        card.style.opacity = '1'; // Mantener la opacidad normal
+        card.style.opacity = '1'; 
     });
 }
 
