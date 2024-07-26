@@ -63,3 +63,10 @@ function resetGame() {
     gameMessage.textContent = 'Eliga un cuadrado'; // Restablecer el mensaje del juego
     currentPlayer = 'X';
 }
+
+function disableCards() {
+    cards.forEach(card => {
+        card.classList.add('disabled');
+        card.style.opacity = '1'; // Mantener la opacidad normal
+    });
+}
