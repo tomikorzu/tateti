@@ -70,3 +70,9 @@ function disableCards() {
         card.style.opacity = '1'; // Mantener la opacidad normal
     });
 }
+
+cards.forEach(card => {
+    card.addEventListener('click', clickInCard);
+});
+
+reset.addEventListener('click', resetGame);
