@@ -24,6 +24,9 @@ function clickInCard(event) {
             winnerText.textContent = `El ganador es: ${currentPlayer}`;
             gameMessage.textContent = 'Presione reiniciar';
             disableCards();
+        } else if (checkDraw()) {
+            winnerText.textContent = 'Empate';
+            gameMessage.textContent = 'Presione reiniciar';
         } else {
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
         }
@@ -42,6 +45,13 @@ function checkWin() {
             const img = card.querySelector('img');
             return img && img.alt === currentPlayer;
         });
+    });
+}
+
+function checkDraw() {
+    return cards.every(card => {
+        const img = card.querySelector('img');
+        return img !== null;
     });
 }
 
